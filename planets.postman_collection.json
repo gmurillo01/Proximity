@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "e1b46ee7-c8dd-4189-a0f6-dadd4fd46f8d",
+		"name": "planets",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "planets",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": ""
+				},
+				"description": "Gets the list of planets"
+			},
+			"response": []
+		},
+		{
+			"name": "gimme-the-token",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "cd98c737-80b5-42ea-8d5d-c0b64a4f567f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"followAuthorizationHeader": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "email",
+						"value": "gemurillom@gmail.com",
+						"description": "Email",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "passphrase",
+						"value": "gm-net",
+						"description": "Passphrase",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"gemurillom@gmail.com\",\"passphrase\":\"gm-net\"}"
+				},
+				"url": {
+					"raw": "http://code-challenge.proximitycr.com/gimme-the-token",
+					"protocol": "http",
+					"host": [
+						"code-challenge",
+						"proximitycr",
+						"com"
+					],
+					"path": [
+						"gimme-the-token"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "gemurillom@gmail.com",
+							"disabled": true
+						},
+						{
+							"key": "passphrase",
+							"value": "gm-net",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "c5a07e74-5963-4f02-ab74-9f5bc14cb3e1",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "76478a36-37e3-4e86-9e37-f380f16da7ed",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "d352d412-0baa-46f8-81ab-4699eecc9a5f",
+			"key": "baseUrl",
+			"value": "http://code-challenge.proximitycr.com/"
+		},
+		{
+			"id": "6d2071ba-669c-4bc2-a987-99c29b2f7de3",
+			"key": "token",
+			"value": "{\"email\":\"gemurillom@gmail.com\",\"passphrase\":\"gm-net\"}"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
