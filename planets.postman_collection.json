@@ -66,8 +66,8 @@
 					}
 				],
 				"body": {
-					"mode": "raw",
-					"raw": "{\"email\":\"gemurillom@gmail.com\",\"passphrase\":\"gm-net\"}"
+					"mode": "formdata",
+					"formdata": []
 				},
 				"url": {
 					"raw": "http://code-challenge.proximitycr.com/gimme-the-token",
@@ -131,12 +131,12 @@
 	],
 	"variable": [
 		{
-			"id": "d352d412-0baa-46f8-81ab-4699eecc9a5f",
+			"id": "7ec263be-0638-4c3e-9d32-5109142619d6",
 			"key": "baseUrl",
 			"value": "http://code-challenge.proximitycr.com/"
 		},
 		{
-			"id": "6d2071ba-669c-4bc2-a987-99c29b2f7de3",
+			"id": "20829714-fc2c-4ef9-b69f-33be71fb785b",
 			"key": "token",
 			"value": "{\"email\":\"gemurillom@gmail.com\",\"passphrase\":\"gm-net\"}"
 		}
